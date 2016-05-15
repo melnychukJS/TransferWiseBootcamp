@@ -111,7 +111,7 @@ for couple in cur_list:
             print('OR_company ',OR_company)
             print('mmr-rate ',MMR['rate'])
             print('offer rate ',OR_company['offerRate'])
-            fee = (MMR['rate'] - OR_company['offerRate'])/OR_company['offerRate'] * 100.0
+            fee = (amount*MMR['rate'] - OR_company['recipientReceives'])/(amount*MMR['rate'])*100
             print('fee ',floor(fee))
             r = requests.post(get_url('hiddenFee/forCompany/{}/{}/{}/{}/{}'.format(
                 company,
