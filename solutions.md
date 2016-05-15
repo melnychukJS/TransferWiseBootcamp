@@ -168,7 +168,6 @@ print(r.content)
 r = requests.post(get_url('task/6/start'))
 print(r.content)
 
-#Get data
 history = requests.get(get_url('payment/history')).json()
 payments = requests.get(get_url('payment')).json()
 
